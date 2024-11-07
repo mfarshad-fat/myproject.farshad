@@ -8,9 +8,9 @@ from src.allocation.adapters.orm import database
 from src.allocation.entrypoint.routes import users_router, books_router, reservations_router, transactions_router, librarians_router , userjwt_router
 app = FastAPI()
 
-# @app.on_event("startup")
-# def on_startup():
-#     init_db()
+@app.on_event("startup")
+def on_startup():
+    init_db()
 
 # تنظیم روت‌ها
 app.include_router(users_router, prefix="/users", tags=["Users"])
