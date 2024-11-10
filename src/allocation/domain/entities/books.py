@@ -14,6 +14,6 @@ class Books (Base) :
     total_copies=Column(Integer)
 
     access_id=Column(Integer,ForeignKey("acceclevel.access_id"))
-    accec1_owner=relationship("Acceclevel",back_populates="accec_rell_1")
+    accec1_owner=relationship("AccessLevel",back_populates="accec_rell_1")
 
     book_rell = relationship("Reservations",back_populates="book_owner")

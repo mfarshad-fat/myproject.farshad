@@ -4,3 +4,4 @@ from .reservations import router as reservations_router
 from .transactions import router as transactions_router
 from .librarians import router as librarians_router
 from .userjwt import router as userjwt_router
+from .token import router as token_router

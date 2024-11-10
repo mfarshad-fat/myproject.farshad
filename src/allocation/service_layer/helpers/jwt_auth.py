@@ -5,8 +5,8 @@ from typing import Optional
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
-from src.allocation.adapters.dtos.userjwt_schemas import TokenData
 from passlib.context import CryptContext
+from src.allocation.adapters.dtos.userjwt_schemas import TokenData
 
 
 
