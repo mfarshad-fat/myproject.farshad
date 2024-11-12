@@ -1,18 +1,18 @@
 src--------------------------------------------
 |  	allocation---------------------------------
 |   |   
-|	  |	adapters-------------------
+|	|	adapters-------------------
 |   |   |   __init__.py
 |   |   |   orm--
 |   |   |   repositories--
 |   |   |   models--      ???
-|   |	  |   mappers.py  ???
+|   |	|   mappers.py  ???
 |   |   |   notifications.py        !!!
 |   |   |   redis_eventpublisher.py !!!
 |   |   |   -----------------------
 |   |   
-|	  |	domain---------------------
-|   |	  |   __init__.py
+|	|	domain---------------------
+|   |	|   __init__.py
 |   |   |   entities--
 |   |   |   services--
 |   |   |   commands.py
@@ -20,7 +20,7 @@ src--------------------------------------------
 |   |   |   enums.py            ???
 |   |   |   -----------------------
 |   |   
-|	  |	entrypoint-----------------
+|	|	entrypoint-----------------
 |   |   |   __init__.py
 |   |   |   ajax_views--        ???
 |   |   |   dependencies--      ???
@@ -32,7 +32,7 @@ src--------------------------------------------
 |   |   |   main.py             !!!
 |   |   |   -----------------------
 |   |
-|	  |	service_layer--------------
+|	|	service_layer--------------
 |   |   |   __init__.py
 |   |   |   command_handlers--  ???
 |   |   |   event_handlers--    ???
