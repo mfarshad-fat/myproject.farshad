@@ -6,7 +6,7 @@ from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
-from src.allocation.adapters.dtos.userjwt_schemas import TokenData
+from src.allocation.domain.entities.userjwt_schemas import TokenData
 
 
 

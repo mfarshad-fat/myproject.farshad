@@ -5,7 +5,7 @@ src--------------------------------------------
 |   |   |   __init__.py
 |   |   |   orm--
 |   |   |   repositories--
-|   |   |   dtos--      ???
+|   |   |   models--      ???
 |   |	|   mappers.py  ???
 |   |   |   notifications.py        !!!
 |   |   |   redis_eventpublisher.py !!!

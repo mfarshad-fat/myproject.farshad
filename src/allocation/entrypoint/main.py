@@ -2,9 +2,9 @@
 
 from fastapi import FastAPI
 from src.allocation.service_layer.helpers.jwt_auth import *
-from src.allocation.bootstrap import init_db
-from src.allocation.adapters.dtos import *
-from src.allocation.adapters.orm import database
+from src.allocation.bootstrap.engin import init_db
+from src.allocation.adapters.models import *
+from src.allocation.adapters.connector import database
 from src.allocation.entrypoint.routes import *
 app = FastAPI()
 

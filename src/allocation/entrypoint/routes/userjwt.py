@@ -2,9 +2,9 @@
 
 from fastapi import APIRouter, Depends, HTTPException, status , Query
 from sqlalchemy.orm import Session
-from src.allocation.adapters.orm.database import get_db
-from src.allocation.adapters.dtos.userjwt_schemas import UserjwtBase, Userjwtread
-import src.allocation.domain.entities as models
+from src.allocation.adapters.connector.database import get_db
+from src.allocation.domain.entities.userjwt_schemas import UserjwtBase, Userjwtread
+import src.allocation.adapters.models as models
 from fastapi.security import OAuth2PasswordRequestForm
 import src.allocation.service_layer.helpers.jwt_auth as jwt
 from datetime import timedelta

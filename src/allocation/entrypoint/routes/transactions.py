@@ -4,10 +4,10 @@
 from fastapi import APIRouter, Depends, HTTPException , Query
 from sqlalchemy.orm import Session
 import src.allocation.service_layer.helpers.jwt_auth as jwt
-from src.allocation.adapters.orm.database import get_db
-from src.allocation.adapters.dtos import TransactionsOut, TransactionsBase, TransactionsUpdate
-import src.allocation.domain.entities as models
-from src.allocation.adapters.dtos.userjwt_schemas import TokenData
+from src.allocation.adapters.connector.database import get_db
+from src.allocation.domain.entities import TransactionsOut, TransactionsBase, TransactionsUpdate
+import src.allocation.adapters.models as models
+from src.allocation.domain.entities.userjwt_schemas import TokenData
 
 router = APIRouter()
 
