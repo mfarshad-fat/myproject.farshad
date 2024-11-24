@@ -13,7 +13,7 @@ class ReservationsBase(BaseModel) :
     def check_role(cls, value):
         if value not in ['reserved', 'checked_out' , 'returned' , 'cancelled']:
             raise ValueError('role must be either "reserved" or "checked_out" or "returned" or "cancelled"')
-        return value    
+        return value
 
 class ReservationsOut(ReservationsBase):
     reservation_id : int

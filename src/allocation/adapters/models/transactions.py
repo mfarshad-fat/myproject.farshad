@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, VARCHAR , DATE , ForeignKey
 from sqlalchemy.orm import relationship
-from src.allocation.adapters.connector.database import Base
+from src.allocation.adapters.connector.postgres import Base
 
 class Transactions (Base) :
     __tablename__ = "transactions"
@@ -12,4 +12,3 @@ class Transactions (Base) :
     librarian_id = Column (Integer , ForeignKey("librarians.librarian_id"))
 
     reserv_owner = relationship("Reservations",back_populates="reserv_rell")
-    librarian_owner=relationship("Librarians",back_populates="librarian_rell")

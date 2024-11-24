@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, VARCHAR
 from sqlalchemy.orm import relationship
-from src.allocation.adapters.connector.database import Base
+from src.allocation.adapters.connector.postgres import Base
 
 class AccessLevel(Base):
     __tablename__ = "acceclevel"

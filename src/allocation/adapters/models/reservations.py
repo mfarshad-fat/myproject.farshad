@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, VARCHAR , DATE , ForeignKey
 from sqlalchemy.orm import relationship
-from src.allocation.adapters.connector.database import Base
+from src.allocation.adapters.connector.postgres import Base
 
 class Reservations (Base) :
     __tablename__ = "reservations"

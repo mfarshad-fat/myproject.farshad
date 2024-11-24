@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, VARCHAR, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
-from src.allocation.adapters.connector.database import Base
+from src.allocation.adapters.connector.postgres import Base
 
 class Users(Base):
     __tablename__ = "users"

@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, VARCHAR , ForeignKey
 from sqlalchemy.orm import relationship
-from src.allocation.adapters.connector.database import Base
+from src.allocation.adapters.connector.postgres import Base
 
 class Books (Base) :
     __tablename__="books"
@@ -12,7 +12,7 @@ class Books (Base) :
     published_year=Column(Integer,index=True)
     genre=Column(VARCHAR,index=True)
     total_copies=Column(Integer)
-
+    price=Column(VARCHAR,index=True)
     access_id=Column(Integer,ForeignKey("acceclevel.access_id"))
     accec1_owner=relationship("AccessLevel",back_populates="accec_rell_1")
 
