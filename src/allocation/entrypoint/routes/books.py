@@ -1,12 +1,5 @@
  
 # entrypoint/routes/books.py
-# جست و جو در عنوان
-# فیلتر ها :
-# قیمت
-# عنوان کتاب
-# ژانر
-# id باید بده
-# سورت کردن بر اساس قیمت (گران ترین و ارزان ترین)
 
 from fastapi import APIRouter, Depends, HTTPException , Query , Path, Body , Request
 from sqlalchemy.orm import Session
