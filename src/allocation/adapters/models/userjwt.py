@@ -10,6 +10,7 @@ class Userjwt(Base):
     lastname = Column(VARCHAR , nullable=False)
     username = Column(VARCHAR, unique=True, nullable=False)
     access_id = Column(Integer, ForeignKey("acceclevel.access_id"))
+    creat_at = Column (DateTime(timezone=True))
     is_logged_out = Column(Boolean, default=False)  # نشان می‌دهد کاربر logout شده است
     otp = Column(VARCHAR, default="None")
     otp_time = Column(DateTime(timezone=True), nullable=True)

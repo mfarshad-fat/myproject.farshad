@@ -15,6 +15,7 @@ class UserjwtBase(BaseModel) :
 
 class Userjwtread(UserjwtBase) :
     userjwt_id : int
+    creat_at : Optional[datetime] = None
     is_logged_out : Optional[bool] = None
     otp : Optional[str] = None
     otp_time : Optional[datetime] = None

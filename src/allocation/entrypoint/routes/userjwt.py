@@ -35,8 +35,9 @@ def create_userjwt(user: UserjwtBase, key: str = Depends(validate_key), db: Sess
     if db_user:
         raise HTTPException(status_code=400, detail="Username already registered")
     
+    creat = datetime.now(timezone.utc)
     # hashed_password = jwt.get_password_hash(user.password)  # هش کردن پسورد
-    new_user = models.Userjwt(username=user.username, firstname=user.firstname,lastname=user.lastname,access_id=user.access_id)    
+    new_user = models.Userjwt(username=user.username, firstname=user.firstname,lastname=user.lastname,access_id=user.access_id,creat_at=creat)    
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
