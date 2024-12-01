@@ -10,6 +10,7 @@ class UserjwtBase(BaseModel) :
     lastname: str
     username: str
     access_id : int
+    pr_account : bool = False
     class Config:
         orm_mode = True
 
