@@ -1,5 +1,3 @@
-# service_layer/helpers/jwt_auth.py
-
 from datetime import datetime, timedelta
 from typing import Optional
 from fastapi import Depends, HTTPException , Request , status
@@ -68,37 +66,3 @@ async def get_current_user(request: Request ,token: str = Depends(oauth2_scheme)
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid token")
-
-# async def get_current_user(request: Request ,token: str = Depends(oauth2_scheme) , db: Session = Depends(get_db)) :
-    
-#     credentials_exception = HTTPException(
-#         status_code=401,
-#         detail="Could not validate credentials",
-#         headers={"WWW-Authenticate": "Bearer"},
-#     )
-
-#     try:
-#         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-#         username: str = payload.get("sub")
-#         if username is None:
-#             raise credentials_exception
-        
-#         user_repo = UserRepository(db)
-#         user = user_repo.get_user_by_username(username)
-#         if not user:
-#             raise HTTPException(
-#                 status_code=status.HTTP_401_UNAUTHORIZED,
-#                 detail="User not found",
-#             )
-#         # Check if the user is logged out
-#         if user.is_logged_out:
-#             raise HTTPException(
-#                 status_code=403,
-#                 detail="User has been logged out",
-#             )
-
-#         return user
-#     except JWTError:
-#         raise HTTPException(
-#             status_code=status.HTTP_401_UNAUTHORIZED,
-#             detail="Invalid token")
