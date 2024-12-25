@@ -11,7 +11,7 @@ app = FastAPI()
 @app.on_event("startup")
 def on_startup():
     init_db()
-
+    
 # تنظیم روت‌ها
 app.include_router(login_router, prefix="/login", tags=["login"])
 app.include_router(userjwt_router, prefix="/userjwt", tags=["UserJWT"])

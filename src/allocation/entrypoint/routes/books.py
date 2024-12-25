@@ -11,7 +11,6 @@ from src.allocation.adapters.repositories.books.postgres_repository import BookR
 from src.allocation.adapters.repositories.books.redis_repository import RedisRepository
 from src.allocation.service_layer.helpers.client_ip_service import ClientIPService
 from src.allocation.service_layer.helpers.dependencies_service import DependencyService
-import redis
 
 router = APIRouter()
 
